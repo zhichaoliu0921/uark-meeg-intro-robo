@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
+Supplementary Materials for MEEG 42503-001 / MEEG 5910V-026: Introduction to Robotics - Robot Kinematics and Dynamics 
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Read the doc here:
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+https://uark-meeg-intro-robo.readthedocs.io/en/latest/
