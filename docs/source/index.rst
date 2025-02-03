@@ -1,7 +1,8 @@
 Welcome
 ===================================
-# Welcome to MEEG 42503-001 / MEEG 5910V-026 **Introduction to Robotics - Robot Kinematics and Dynamics**.
 
+Welcome to MEEG 42503-001 / MEEG 5910V-026 **Introduction to Robotics - Robot Kinematics and Dynamics**.
+=========================================================================================================
 
 About this Course
 --------
@@ -22,9 +23,6 @@ Instructor: Prof. Mehran Armand <marmand@uark.edu>
 Course Assistant: Dr. Zhichao Liu <zhichaol@uark.edu>
 
 
-.. note::
-
-   Tutorials are coming soon!
 
 Contents
 --------
@@ -33,3 +31,8 @@ Contents
 
    install
    
+
+News
+====
+- 01/13/2025: Welcome!
+- 02/05/2025: Please read `Installation Guide <install.rst>`_
