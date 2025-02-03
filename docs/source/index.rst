@@ -1,6 +1,6 @@
 Welcome
 ===================================
-#Welcome to MEEG 42503-001 / MEEG 5910V-026 **Introduction to Robotics - Robot Kinematics and Dynamics**.
+# Welcome to MEEG 42503-001 / MEEG 5910V-026 **Introduction to Robotics - Robot Kinematics and Dynamics**.
 
 
 About this Course
