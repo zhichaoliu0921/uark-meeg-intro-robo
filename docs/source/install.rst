@@ -22,6 +22,7 @@ You can download an Ubuntu image `here <https://releases.ubuntu.com/jammy/>`_. M
    :width: 600
 
 #. Download and install VirtualBox
+
 You can download VirtualBox from the downloads page `here <https://www.virtualbox.org/wiki/Downloads>`_. Follow instructions on how to install VirtualBox for your specific OS. 
 Once you have completed the installation, go ahead and run VirtualBox.
 
