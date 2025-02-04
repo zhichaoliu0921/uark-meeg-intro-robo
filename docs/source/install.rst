@@ -352,7 +352,7 @@ When colcon has completed building successfully, the output will be in the insta
 
 .. code-block:: console
 
-   echo "source ~/ros_ws/install/setup.bash" >> ~/.bashrc
+   echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 
 9. **Try a demo**
 
@@ -365,7 +365,7 @@ With the environment sourced, we can run executables built by colcon. Open a new
 In another terminal, let’s run a publisher node
 
 .. code-block:: console
-   
+
    ros2 run examples_rclcpp_minimal_publisher publisher_member_function
 
 You should see messages from the publisher and subscriber with numbers incrementing.
