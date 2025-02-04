@@ -84,8 +84,29 @@ Once the installation completes, the machine will automatically reboot to comple
 
 Finally you will be greeted with the Ubuntu log-in screen where you can enter your username and password defined during the initial setup (don’t forget that the default password is ‘changeme’ if you left everything as the default).
 
-WSL (Windows Subsystem for Linux)
---------------------------------
+Dual-boot
+----------
+
+Dual-boot refers to a computer setup in which two operating systems are installed on a single machine,
+allowing the user to choose which one to run when the computer starts up.
+
+1. **Download an Ubuntu Image**
+
+You will need to download a ISO file for Ubuntu. Here is the link:
+https://releases.ubuntu.com/jammy/
+Please select the 64-bit PC (AMD64) desktop image to download.
+
+.. note::
+    If you are using macOS Applie Silicone (M1/M2), you may need to download ARM64 version https://cdimage.ubuntu.com/releases/22.04.5/release/ 
+
+`Here <https://www.linuxtechi.com/dual-boot-ubuntu-22-04-and-windows-11/>`_ is a tutorial for installing Ubuntu 22.04 alongside Windows 11, as well as a `video tutorial <https://youtu.be/QKn5U2esuRk/>`_ .
+
+.. note::
+    incorrectly setting up a dual-boot system can lead to data loss or system malfunctions. It's crucial to back up important data before attempting to set up a dual-boot system.
+
+
+WSL (Windows Subsystem for Linux) ``no GUI``
+---------------------------------------------------
 
 .. note::
     This method only works with Windows 10 (Version 1903 or higher, with Build 18362 or higher), Windows 11 (Any version). 
@@ -142,3 +163,99 @@ All done. You can now open Ubuntu 22.04 from your Start menu any time you want t
 .. image:: images/wsl_step8.png
    :width: 600
 
+
+Play with Your Ubuntu 
+-----------------------
+
+A successfully configured Ubuntu 22.04 looks like this: 
+
+.. image:: images/ubuntu22.04.png
+   :width: 600
+
+Unlike Windows or MacOS, Ubuntu heavily relies on Command Line Tools. You can control your computer through typing in texts (or Commands) in the terminal. On a Ubuntu 20.04 system you can find a launcher for the terminal by clicking on the Activities item at the top left of the screen, then typing the first few letters of “terminal”, “command”, “prompt” or “shell”. Yes, the developers have set up the launcher with all the most
+common synonyms, so you should have no problems finding it. If you can’t find a launcher, or if you just want a faster way to bring up the terminal, most Linux systems use the
+same default keyboard shortcut to start it: ``Ctrl-Alt-T``.
+
+Install ROS2 Humble 
+-----------------------
+
+The steps are adopted from  `here [Ubuntu deb packages] <https://linuxconfig.org/ubuntu-22-04-on-wsl-windows-subsystem-for-linux/>`_ .
+
+1. **Set locale**
+
+Make sure you have a locale which supports ``"UTF-8"``. If you are in a minimal environment (such as a docker container), the locale may be something minimal like  ``"POSIX"``. We test with the following settings. However, it should be fine if you’re using a different UTF-8 supported locale.
+
+.. code-block:: console
+
+   locale  # check for UTF-8
+   sudo apt update && sudo apt install locales
+   sudo locale-gen en_US en_US.UTF-8
+   sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+   export LANG=en_US.UTF-8
+
+   locale  # verify settings
+
+2. **Setup Sources**
+
+You will need to add the ROS 2 apt repository to your system.
+
+.. code-block:: console
+   sudo apt install software-properties-common
+   sudo add-apt-repository universe
+
+Now add the ROS 2 GPG key with apt.
+
+.. code-block:: console
+   sudo apt update && sudo apt install curl -y
+   sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+Then add the repository to your sources list.
+
+.. code-block:: console
+   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+3. **Install ROS 2 packages**
+
+Update your apt repository caches after setting up the repositories.
+
+.. code-block:: console
+   sudo apt update
+
+ROS 2 packages are built on frequently updated Ubuntu systems. It is always recommended that you ensure your system is up to date before installing new packages.
+
+.. code-block:: console
+   sudo apt upgrade
+
+Desktop Install (Recommended): ROS, RViz, demos, tutorials.
+
+.. code-block:: console
+   sudo apt install ros-humble-desktop
+
+Development tools: Compilers and other tools to build ROS packages
+
+.. code-block:: console
+   sudo apt install ros-dev-tools
+
+
+3. **Environment setup**
+
+Add sourcing to your shell startup script
+
+.. code-block:: console
+   echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+   source ~/.bashrc
+
+
+4. **Try some examples**
+
+In one terminal, source the setup file and then run a C++ ``"talker"``
+
+.. code-block:: console
+   ros2 run demo_nodes_cpp talker
+
+In another terminal source the setup file and then run a Python ``"listener"``
+
+.. code-block:: console
+   ros2 run demo_nodes_py listener
+
+You should see the talker saying that it’s Publishing messages and the listener saying I heard those messages. This verifies both the C++ and Python APIs are working properly.
