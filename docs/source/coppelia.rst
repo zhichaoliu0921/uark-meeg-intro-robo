@@ -23,7 +23,7 @@ When the download is done, you can find a file ``CoppeliaSim_Edu_V4_9_0_rev2_Ubu
 
 Right click the downloaded file and choose ``Extract Here``, and wait until the extraction is done. It might take a few minutes. 
 
-.. image:: images/coppelia_install_step3.png
+.. image:: images/coppelia_install_step3.jpg
    :width: 600
 
 3. **Run the Simulation**
