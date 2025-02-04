@@ -64,6 +64,7 @@ Using Python
 Using ROS 2 
 ------------
 
+Make sure you have installed ROS2 Humble, created and sourced the workspace ``~\ros2_ws`` as shown in `Ubuntu and ROS2 Installation Guide <install.html>`_. 
 
 
 
