@@ -37,6 +37,7 @@ Enter (Left click) the folder ``CoppeliaSim_Edu_V4_9_0_rev2_Ubuntu22_04``. Right
 Run the command
 
 .. code-block:: console
+    
     ./coppeliaSim.sh
 
 You will see the simulator launching, and you are ready to use it.
