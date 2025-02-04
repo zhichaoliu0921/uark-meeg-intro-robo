@@ -87,3 +87,54 @@ So the plugin was successfully loaded.
 
 2. **Install 2 ROS2 Packages**
 
+Install dependencies 
+
+.. code-block:: console
+
+    sudo apt-get install xsltproc
+    python3 -m pip install xmlschema
+
+Go to the ros2 workspace
+
+.. code-block:: console
+
+    cd ~/ros2_ws/src
+
+Clone the packages ``simROS2``
+
+.. code-block:: console
+
+    git clone https://github.com/CoppeliaRobotics/simROS2.git sim_ros2_interface
+    cd sim_ros2_interface
+    git checkout coppeliasim-v4.9.0-rev2
+
+.. note::
+    If you are not using Version 4.9.0 (rev. 2), replace ``coppeliasim-v4.9.0-rev2`` with the actual CoppeliaSim version you have.
+
+Go to the ros2 workspace
+
+.. code-block:: console
+
+    cd ~/ros2_ws/src
+
+Clone the packages ``ros2_bubble_rob``
+
+.. code-block:: console
+
+    git clone https://github.com/CoppeliaRobotics/ros2_bubble_rob.git
+    cd ros2_bubble_rob
+    git checkout coppeliasim-v4.9.0-rev2
+
+3. **Compile the packages**
+
+.. code-block:: console
+
+    cd ~/ros2_ws
+    export COPPELIASIM_ROOT_DIR=~/Downloads/CoppeliaSim_Edu_V4_9_0_rev2_Ubuntu22_04
+    ulimit -s unlimited #otherwise compilation might freeze/crash
+    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+
+.. note::
+    if you extract CoppeliaSim in other locations, change ``export COPPELIASIM_ROOT_DIR=~/path/to/coppeliaSim/folder``.
+
+
