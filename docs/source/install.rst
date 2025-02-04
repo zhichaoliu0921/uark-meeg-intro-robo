@@ -200,18 +200,21 @@ Make sure you have a locale which supports ``"UTF-8"``. If you are in a minimal 
 You will need to add the ROS 2 apt repository to your system.
 
 .. code-block:: console
+
    sudo apt install software-properties-common
    sudo add-apt-repository universe
 
 Now add the ROS 2 GPG key with apt.
 
 .. code-block:: console
+
    sudo apt update && sudo apt install curl -y
    sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 
 Then add the repository to your sources list.
 
 .. code-block:: console
+
    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
 3. **Install ROS 2 packages**
@@ -219,21 +222,25 @@ Then add the repository to your sources list.
 Update your apt repository caches after setting up the repositories.
 
 .. code-block:: console
+
    sudo apt update
 
 ROS 2 packages are built on frequently updated Ubuntu systems. It is always recommended that you ensure your system is up to date before installing new packages.
 
 .. code-block:: console
+
    sudo apt upgrade
 
 Desktop Install (Recommended): ROS, RViz, demos, tutorials.
 
 .. code-block:: console
+
    sudo apt install ros-humble-desktop
 
 Development tools: Compilers and other tools to build ROS packages
 
 .. code-block:: console
+
    sudo apt install ros-dev-tools
 
 
@@ -242,6 +249,7 @@ Development tools: Compilers and other tools to build ROS packages
 Add sourcing to your shell startup script
 
 .. code-block:: console
+
    echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
 
@@ -250,11 +258,13 @@ Add sourcing to your shell startup script
 In one terminal, source the setup file and then run a C++ ``talker``
 
 .. code-block:: console
+
    ros2 run demo_nodes_cpp talker
 
 In another terminal source the setup file and then run a Python ``listener``
 
 .. code-block:: console
+
    ros2 run demo_nodes_py listener
 
 You should see the talker saying that it’s Publishing messages and the listener saying I heard those messages. This verifies both the C++ and Python APIs are working properly.
@@ -264,17 +274,20 @@ You should see the talker saying that it’s Publishing messages and the listene
 Install colcon
 
 .. code-block:: console
+
    sudo apt install python3-colcon-common-extensions
 
 Create a workspace
 
 .. code-block:: console
+
    mkdir -p ~/ros2_ws/src
    cd ~/ros2_ws
 
 At this point the workspace contains a single empty directory ``src``
 
 .. code-block:: console
+
    .
    └── src
 
@@ -285,11 +298,13 @@ Add some sources
 Let's clone the `examples <https://github.com/ros2/examples/>`_ repository into the ``src`` directory of the workspace:
 
 .. code-block:: console
+
    git clone https://github.com/ros2/examples src/examples -b humble
 
 Now the workspace should have the source code to the ROS 2 examples:
 
 .. code-block:: console
+
    .
    └── src
       └── examples
@@ -306,12 +321,14 @@ Now the workspace should have the source code to the ROS 2 examples:
 In the root of the workspace, run ``colcon build``. ``--symlink-install`` allows the installed files to be changed by changing the files in the source space (e.g. Python files or other non-compiled resources) for faster iteration.
 
 .. code-block:: console
+
    cd ~/ros2_ws
    colcon build --symlink-install
 
 After the build is finished, we should see the ``build``, ``install``, and ``log`` directories
 
 .. code-block:: console
+
    .
    ├── build
    ├── install
@@ -326,6 +343,7 @@ After the build is finished, we should see the ``build``, ``install``, and ``log
 To run tests for the packages we just built, run the following:
 
 .. code-block:: console
+
    colcon test
 
 8. **Source the environment**
@@ -333,6 +351,7 @@ To run tests for the packages we just built, run the following:
 When colcon has completed building successfully, the output will be in the install directory. Before you can use any of the installed executables or libraries, you will need to add them to your path and library paths. colcon will have generated bash/bat files in the install directory to help set up the environment. These files will add all of the required elements to your path and library paths as well as provide any bash or shell commands exported by packages.
 
 .. code-block:: console
+
    echo "source ~/ros_ws/install/setup.bash" >> ~/.bashrc
 
 9. **Try a demo**
@@ -340,11 +359,13 @@ When colcon has completed building successfully, the output will be in the insta
 With the environment sourced, we can run executables built by colcon. Open a new terminal, run a subscriber node from the examples:
 
 .. code-block:: console
+
    ros2 run examples_rclcpp_minimal_subscriber subscriber_member_function
 
 In another terminal, let’s run a publisher node
 
 .. code-block:: console
+   
    ros2 run examples_rclcpp_minimal_publisher publisher_member_function
 
 You should see messages from the publisher and subscriber with numbers incrementing.
