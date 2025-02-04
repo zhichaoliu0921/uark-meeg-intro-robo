@@ -21,3 +21,6 @@ Please select the 64-bit PC (AMD64) desktop image to download.
 
 .. note::
     If you are using macOS Applie Silicone (M1/M2), you may need to download ARM64 version https://cdimage.ubuntu.com/releases/22.04.5/release/ 
+
+.. image:: images/iso.png
+   :width: 600
