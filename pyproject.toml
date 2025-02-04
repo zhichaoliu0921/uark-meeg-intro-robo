@@ -3,6 +3,6 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "Introduction to Robotic"
+name = "Introduction to Robotics"
 authors = [{name = "Zhichao Liu", email = "zhichaol@uark.edu"}]
 dynamic = ["version", "description"]
