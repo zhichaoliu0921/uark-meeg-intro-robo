@@ -138,3 +138,28 @@ Clone the packages ``ros2_bubble_rob``
     if you extract CoppeliaSim in other locations, change ``export COPPELIASIM_ROOT_DIR=~/path/to/coppeliaSim/folder``.
 
 
+4. **Try it OUT**
+
+Launch CoppeliaSim
+
+.. code-block:: console
+
+    cd ~/Downloads/CoppeliaSim_Edu_V4_9_0_rev2_Ubuntu22_04
+    ./coppeliaSim.sh
+
+After the software is launched, open another terminal and Type
+
+.. code-block:: console
+
+    ros2 node list
+
+Upon succesful ROS2 Interface load, checking the available nodes gives this:
+
+.. code-block:: console
+
+    ros2 node list
+    /sim_ros2_interface
+
+
+
+
