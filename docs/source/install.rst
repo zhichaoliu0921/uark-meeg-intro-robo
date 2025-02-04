@@ -243,19 +243,114 @@ Add sourcing to your shell startup script
 
 .. code-block:: console
    echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-   source ~/.bashrc
 
 
 4. **Try some examples**
 
-In one terminal, source the setup file and then run a C++ ``"talker"``
+In one terminal, source the setup file and then run a C++ ``talker``
 
 .. code-block:: console
    ros2 run demo_nodes_cpp talker
 
-In another terminal source the setup file and then run a Python ``"listener"``
+In another terminal source the setup file and then run a Python ``listener``
 
 .. code-block:: console
    ros2 run demo_nodes_py listener
 
 You should see the talker saying that it’s Publishing messages and the listener saying I heard those messages. This verifies both the C++ and Python APIs are working properly.
+
+5. **Create a Workspace**
+
+Install colcon
+
+.. code-block:: console
+   sudo apt install python3-colcon-common-extensions
+
+Create a workspace
+
+.. code-block:: console
+   mkdir -p ~/ros2_ws/src
+   cd ~/ros2_ws
+
+At this point the workspace contains a single empty directory ``src``
+
+.. code-block:: console
+   .
+   └── src
+
+   1 directory, 0 files
+
+Add some sources
+
+Let's clone the `examples <https://github.com/ros2/examples/>`_ repository into the ``src`` directory of the workspace:
+
+.. code-block:: console
+   git clone https://github.com/ros2/examples src/examples -b humble
+
+Now the workspace should have the source code to the ROS 2 examples:
+
+.. code-block:: console
+   .
+   └── src
+      └── examples
+         ├── CONTRIBUTING.md
+         ├── LICENSE
+         ├── rclcpp
+         ├── rclpy
+         └── README.md
+
+   4 directories, 3 files
+
+6. **Build the workspace**
+
+In the root of the workspace, run ``colcon build``. ``--symlink-install`` allows the installed files to be changed by changing the files in the source space (e.g. Python files or other non-compiled resources) for faster iteration.
+
+.. code-block:: console
+   cd ~/ros2_ws
+   colcon build --symlink-install
+
+After the build is finished, we should see the ``build``, ``install``, and ``log`` directories
+
+.. code-block:: console
+   .
+   ├── build
+   ├── install
+   ├── log
+   └── src
+
+   4 directories, 0 files
+
+
+7. **Run tests**
+
+To run tests for the packages we just built, run the following:
+
+.. code-block:: console
+   colcon test
+
+8. **Source the environment**
+
+When colcon has completed building successfully, the output will be in the install directory. Before you can use any of the installed executables or libraries, you will need to add them to your path and library paths. colcon will have generated bash/bat files in the install directory to help set up the environment. These files will add all of the required elements to your path and library paths as well as provide any bash or shell commands exported by packages.
+
+.. code-block:: console
+   echo "source ~/ros_ws/install/setup.bash" >> ~/.bashrc
+
+9. **Try a demo**
+
+With the environment sourced, we can run executables built by colcon. Open a new terminal, run a subscriber node from the examples:
+
+.. code-block:: console
+   ros2 run examples_rclcpp_minimal_subscriber subscriber_member_function
+
+In another terminal, let’s run a publisher node
+
+.. code-block:: console
+   ros2 run examples_rclcpp_minimal_publisher publisher_member_function
+
+You should see messages from the publisher and subscriber with numbers incrementing.
+
+
+More to read
+==============
+
+https://docs.ros.org/en/humble/Tutorials.html
