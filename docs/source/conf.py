@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Introduction to Robotic'
+project = 'Introduction to Robotics'
 copyright = '2025, BIGSS UARK'
 author = 'Zhichao Liu'
 
-release = '0.1'
-version = '0.1.0'
+release = 'Spring 2025'
+version = 'Spring 2025'
 
 # -- General configuration
 
