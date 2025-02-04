@@ -24,3 +24,8 @@ Please select the 64-bit PC (AMD64) desktop image to download.
 
 .. image:: images/iso.png
    :width: 600
+
+Prepare Your Machine
+------------
+
+#. Virtual Machine ``recommended``
