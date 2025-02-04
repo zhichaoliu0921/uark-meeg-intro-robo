@@ -372,6 +372,6 @@ You should see messages from the publisher and subscriber with numbers increment
 
 
 More to read
-==============
+----------------
 
 https://docs.ros.org/en/humble/Tutorials.html
