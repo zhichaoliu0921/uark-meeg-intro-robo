@@ -49,6 +49,7 @@ Using Python
 --------------
 
 1. In a new terminal, Type
+
 .. code-block:: console
 
    pip install cbor pyzmq
