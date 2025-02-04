@@ -8,24 +8,22 @@ them. The tools are essential for the homeworks and projects so please make sure
 and all the tools are good to go after you follow this guide.
 
 You will need to use `ROS2 <https://docs.ros.org/en/humble/index.html>`_ (Robot Operating System). ROS2 is easier to install and run in Linux-like
-systems. So this tutorial will only introduce how to install ROS2 HUmble and MATLAB on Ubuntu 22.04.5 Jammy Jellyfish. You are free to use other version of ROS2 if you are familiar with this framework (all variants of ROS2
-share the same coding conventions).
+systems. So this tutorial will only introduce how to install ROS2 HUmble on Ubuntu 22.04.5 Jammy Jellyfish. You are free to use other version of ROS2 if you are familiar with this framework (all variants of ROS2
+share the same coding conventions). There are three ways to install Ubuntu on your pc: Virtual Machine, Dual-boot, and WSL (Windows Subsystem for Linux).
 
-Prepare Your Machine
+Virtual Machine ``recommended``
 ------------
-To install ROS2, first you need a computer that runs Ubuntu 22.04 operating system. If your computer runs
-Windows or MacOS, you can either use method 1: dual-boot your machine, or method 2: use virtual
-machine on your PC. For both methods, you need to download a ISO file for Ubuntu. Here is the link:
-https://releases.ubuntu.com/jammy/
-Please select the 64-bit PC (AMD64) desktop image to download.
 
-.. note::
-    If you are using macOS Applie Silicone (M1/M2), you may need to download ARM64 version https://cdimage.ubuntu.com/releases/22.04.5/release/ 
+#. Download an Ubuntu Image
+
+You can download an Ubuntu image `here <https://releases.ubuntu.com/jammy/>`_. Make sure to save it to a memorable location on your PC! For this tutorial, we will use the latest Ubuntu 22.04.5 LTS (long term support) release.
 
 .. image:: images/iso.png
    :width: 600
 
-Prepare Your Machine
-------------
+#. Download and install VirtualBox
+You can download VirtualBox from the downloads page `here <https://www.virtualbox.org/wiki/Downloads>`_. Follow instructions on how to install VirtualBox for your specific OS. 
+Once you have completed the installation, go ahead and run VirtualBox.
 
-#. Virtual Machine ``recommended``
+.. image:: images/virtualbox.png
+   :width: 600
