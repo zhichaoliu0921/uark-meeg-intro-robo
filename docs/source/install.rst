@@ -90,3 +90,55 @@ WSL (Windows Subsystem for Linux)
 .. note::
     This method only works with Windows 10 (Version 1903 or higher, with Build 18362 or higher), Windows 11 (Any version). 
 
+We follow the `steps <https://linuxconfig.org/ubuntu-22-04-on-wsl-windows-subsystem-for-linux>`_ for demonstration.
+
+1. **Turn Windows Features ON**
+
+To start, we will need to enable the Vitual Machine Platform module and Windows Subsystem for Linux feature. Open up your Start menu and locate the ``Turn Windows features on or off`` menu. 
+
+.. image:: images/wsl_step1.png
+   :width: 600
+
+2. **Enable Virtual machine platform**
+
+Next, find the ``Virtual Machine Platform`` and ``Windows Subsystem for Linux`` options. Check both of these boxes and then press OK to enable the features. 
+
+.. image:: images/wsl_step2.png
+   :width: 600
+
+Windows will make the changes, which may take a minute or two, then ask you to restart your system for the changes to take effect. Proceed with the reboot. 
+
+3. **Microsoft Store**
+
+When your system boots back up, go to your Start menu and find the Microsoft Store. Once there, search for Ubuntu 22.04. 
+
+.. image:: images/wsl_step3.png
+   :width: 600
+
+Once you have located the Ubuntu 22.04 LTS page, click on the “Get” button to download it.
+
+.. image:: images/wsl_step4.png
+   :width: 600
+
+4. **Install Ubuntu 22.04**
+
+Once the download is complete, you can open Ubuntu 22.04 from your Start menu. 
+
+.. image:: images/wsl_step5.png
+   :width: 600
+
+There will be an installation process that appears, and it should not take very long. The distro will be unpacked and ready to use shortly. 
+
+.. image:: images/wsl_step6.png
+   :width: 600
+
+At this time, you will also be asked to create a new user account for Ubuntu 22.04 and some other small configuration settings. 
+
+.. image:: images/wsl_step7.png
+   :width: 600
+
+All done. You can now open Ubuntu 22.04 from your Start menu any time you want to use it. You will be presented with a command line terminal and can execute nearly all the same commands you could on a physical Ubuntu 22.04 machine. 
+
+.. image:: images/wsl_step8.png
+   :width: 600
+
