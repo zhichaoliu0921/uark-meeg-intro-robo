@@ -14,14 +14,14 @@ share the same coding conventions). There are three ways to install Ubuntu on yo
 Virtual Machine ``recommended``
 --------------------------------
 
-1. Download an Ubuntu Image
+1. **Download an Ubuntu Image**
 
 You can download an Ubuntu image `here <https://releases.ubuntu.com/jammy/>`_. Make sure to save it to a memorable location on your PC! For this tutorial, we will use the latest Ubuntu 22.04.5 LTS (long term support) release.
 
 .. image:: images/iso.png
    :width: 600
 
-2. Download and install VirtualBox
+2. **Download and install VirtualBox**
 
 You can download VirtualBox from the `downloads page <https://www.virtualbox.org/wiki/Downloads>`_. Follow instructions on how to install VirtualBox for your specific OS. 
 Once you have completed the installation, go ahead and run VirtualBox.
@@ -29,7 +29,7 @@ Once you have completed the installation, go ahead and run VirtualBox.
 .. image:: images/virtualbox.png
    :width: 600
 
-3. Create a new virtual machine
+3. **Create a new virtual machine**
 
 Click New to create a new virtual machine. Fill in the appropriate details:
 
@@ -40,7 +40,7 @@ Click New to create a new virtual machine. Fill in the appropriate details:
 .. image:: images/virtual_step1.png
    :width: 600
 
-4. Create a user profile
+4. **Create a user profile**
 
 To enable the automatic install we need to prepopulate our username and password here in addition to our machine name so that it can be configured automatically during first boot.
 
@@ -56,3 +56,5 @@ It is important to change these values since the defaults will create a user wit
 
 .. image:: images/virtual_step2.png
    :width: 600
+
+
