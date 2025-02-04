@@ -57,4 +57,29 @@ It is important to change these values since the defaults will create a user wit
 .. image:: images/virtual_step2.png
    :width: 600
 
+5. **Define the Virtual Machine’s resources**
 
+In the next section we can specifiy how much of our host machine’s memory and processors the virtual machine can use. For good performance it’s recommended to provide your VM with around 8GB of RAM (althought 4GB will still be usable) and 4 CPUs. Try to remain in the green areas of each slider to prevent issues with your machine running both the VM and the host OS.
+
+.. image:: images/virtual_step3.png
+   :width: 600
+
+Then we need to specify the size of the hard disc for the virtual machine. For Ubuntu we recommend around 25 GB as a minimum. By default the hard disk will scale dynamically as more memory is required up to the defined limit. If you want to pre-allocate the full amount, check the ‘Pre-allocate Full Size’ check box. This will improve performance but may take up unnecessary space.
+
+.. image:: images/virtual_step4.png
+   :width: 600
+
+Click Next to continue and view a summary of your machine setting. After this click Finish to initialize the machine!
+
+.. image:: images/virtual_step5.png
+   :width: 600
+
+6. **Install your image**
+
+Click Start to launch the virtual machine. You will see a message saying ‘Powering VM up …’ and your desktop window will appear. On first boot the unattended installation will kick in so do not interact with the prompt to ‘Try and Install Ubuntu’ and let it progress automatically to the splash screen and into the installer.
+
+You will notice at this stage that the resolution of the window is fixed at 800x600. This is because the Guest Additions features are not installed until after the Ubuntu installation has completed. 
+
+Once the installation completes, the machine will automatically reboot to complete the installation.
+
+Finally you will be greeted with the Ubuntu log-in screen where you can enter your username and password defined during the initial setup (don’t forget that the default password is ‘changeme’ if you left everything as the default).
