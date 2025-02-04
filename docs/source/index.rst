@@ -30,9 +30,11 @@ Contents
 .. toctree::
 
    install
+   coppelia
    
 
 News
 ====
 - 01/13/2025: Welcome!
-- 02/05/2025: Please read `Installation Guide <install.html>`_
+- 02/05/2025: Please read `Ubuntu and ROS2 Installation Guide <install.html>`_
+- 02/05/2025: Please read `CoppeliaSIm Tutorial <coppelia.html>`_
