@@ -37,13 +37,31 @@ Enter (Left click) the folder ``CoppeliaSim_Edu_V4_9_0_rev2_Ubuntu22_04``. Right
 Run the command
 
 .. code-block:: console
-    
+
     ./coppeliaSim.sh
 
 You will see the simulator launching, and you are ready to use it.
 
 .. image:: images/coppelia_install_step5.png
    :width: 600
+
+Using Python
+--------------
+
+1. In a new terminal, Type
+.. code-block:: console
+
+   pip install cbor pyzmq
+
+
+2. After the installation, re-open the CoppeliaSim and you will be asked to choose between ``Lua`` and ``Python``. Select ``Python``.
+
+.. image:: images/coppelia_sim_python.png
+   :width: 600
+
+
+Using ROS 2 
+------------
 
 
 
