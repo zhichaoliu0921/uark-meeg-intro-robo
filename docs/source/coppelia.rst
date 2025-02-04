@@ -66,5 +66,24 @@ Using ROS 2
 
 Make sure you have installed ROS2 Humble, created and sourced the workspace ``~\ros2_ws`` as shown in `Ubuntu and ROS2 Installation Guide <install.html>`_. 
 
+1. **Enable ROS2 Plugin in CoppeliaSim**
 
+In the input of ``Sandbox (python)`` at the very bottom, copy, paste and press ``enter`` on the keyboard 
+
+
+.. code-block:: console
+
+   simROS2 = require('simROS2')
+
+.. image:: images/coppelia_ros2_step1.png
+   :width: 600
+
+You will see output in the background terminal as
+
+.. image:: images/coppelia_ros2_step1_out.png
+   :width: 600
+
+So the plugin was successfully loaded.
+
+2. **Install 2 ROS2 Packages**
 
