@@ -76,10 +76,17 @@ Click Next to continue and view a summary of your machine setting. After this cl
 
 6. **Install your image**
 
-Click Start to launch the virtual machine. You will see a message saying ‘Powering VM up …’ and your desktop window will appear. On first boot the unattended installation will kick in so do not interact with the prompt to ‘Try and Install Ubuntu’ and let it progress automatically to the splash screen and into the installer.
+Click Start to launch the virtual machine. You will see a message saying 'Powering VM up …' and your desktop window will appear. On first boot the unattended installation will kick in so do not interact with the prompt to ‘Try and Install Ubuntu’ and let it progress automatically to the splash screen and into the installer.
 
 You will notice at this stage that the resolution of the window is fixed at 800x600. This is because the Guest Additions features are not installed until after the Ubuntu installation has completed. 
 
 Once the installation completes, the machine will automatically reboot to complete the installation.
 
 Finally you will be greeted with the Ubuntu log-in screen where you can enter your username and password defined during the initial setup (don’t forget that the default password is ‘changeme’ if you left everything as the default).
+
+WSL (Windows Subsystem for Linux)
+--------------------------------
+
+.. note::
+    This method only works with Windows 10 (Version 1903 or higher, with Build 18362 or higher), Windows 11 (Any version). 
+
