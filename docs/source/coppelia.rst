@@ -137,6 +137,8 @@ Clone the packages ``ros2_bubble_rob``
 .. note::
     if you extract CoppeliaSim in other locations, change ``export COPPELIASIM_ROOT_DIR=~/path/to/coppeliaSim/folder``.
 
+.. note::
+    If you start a new terminal, you will have to run ``export COPPELIASIM_ROOT_DIR=~/Downloads/CoppeliaSim_Edu_V4_9_0_rev2_Ubuntu22_04`` every time before you compile your ros2 workspace. Run this to avoid ``echo "export COPPELIASIM_ROOT_DIR=~/Downloads/CoppeliaSim_Edu_V4_9_0_rev2_Ubuntu22_04" >> ~/.bashrc``
 
 4. **Try it OUT**
 
